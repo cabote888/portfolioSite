@@ -1,0 +1,407 @@
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #0a192f;
+}
+
+::selection {
+  background-color: aquamarine;
+  color: #0a192f;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a192f;
+  margin-block: 0.8em;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: aquamarine;
+  border: 0.25em solid #0a192f;
+  border-radius: 100vw;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+}
+
+.nav-logo {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-left: 1em;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 3rem;
+}
+
+.nav-link {
+  color: #ccd6f6;
+  font-family: "Roboto Mono", monospace;
+  font-size: .8rem;
+  font-weight: 600;
+  padding: 0.5em;
+  transition: 300ms ease-in-out;
+}
+
+.nav-link:hover {
+  color: aquamarine;
+}
+
+.get-resume {
+  border: 1px solid aquamarine;
+  border-radius: 5px;
+  color: aquamarine;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.85em;
+  padding: 10px 10px;
+  transition: 300ms ease-in-out;
+}
+
+.get-resume:hover {
+  background-color: rgba(127, 255, 212, 0.082);
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: azure;
+}
+
+#main {
+  margin-left: 10%;
+  margin-top: 8em;
+}
+
+.greeting {
+  color: aquamarine;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.my-name {
+  color: #ccd6f6;
+  font-family: "Manrope", sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  padding: .1em 0 .1em 0;
+}
+
+.my-desc {
+  color: #8892b0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  max-width: 50%;
+  line-height: 1.5;
+}
+
+.self-taught {
+  color: aquamarine;
+  font-weight: 700;
+}
+
+.main-btns{
+  margin-top: 5em;
+}
+
+.btn-linkedin {
+  border: 1px solid aquamarine;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 15px 25px 15px 25px;
+  margin-right: 2em;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+i {
+  margin-right: 8px;
+}
+
+.btn-linkedin:hover { 
+  box-shadow: 0px 0px 40px 40px rgb(127, 255, 212) inset;
+  color: black;
+}
+
+#about-me {
+  margin: auto;
+  margin-top: 15em;
+  max-width: 80%;
+}
+
+.about-title {
+  color: #ccd6f6;
+  display: inline;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  padding-bottom: .2em;
+}
+
+.about-desc {
+  color: #8892b0;
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin-top: 2em;
+  line-height: 1.6;
+}
+
+.tech-desc {
+  color: #8892b0;
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin-top: 2em;
+}
+
+.tech-list {
+  display: flex;
+  margin-top: 1em;
+  gap: 3em;
+}
+
+.tech-list > :nth-child(1),
+.tech-list > :nth-child(2) {
+  color: #8892b0;
+  font-family: "Roboto Mono", monospace;
+  font-size: .9rem;
+}
+
+.tech-item {
+  font-family: "Roboto Mono", monospace;
+  line-height: 1.8;
+}
+
+.tech-arrow {
+  color: aquamarine;
+}
+
+#projects {
+  display: flex;
+  flex-direction: row;
+  gap: 5em;
+  margin-top: 15em;
+  padding-inline: 10%;
+}
+
+.pj-misc {
+  padding: 1em 1.4em 1em;
+}
+
+.ti-brand-github,
+.ti-external-link {
+  color: aquamarine;
+  font-size: 1.4rem;
+}
+
+.pj-column-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 8em;
+}
+
+.pj-column-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 8em;
+}
+
+.pj-card {
+  background-color: #112340;
+  border-radius: 10px;
+  box-shadow: rgba(17, 34, 64, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.pj-img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+}
+
+.pj-head > h2 {
+  color: #ccd6f6;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+.pj-head > p {
+  color: #8892b0;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin-top: 1em;
+}
+
+.pj-text {
+  padding-inline: 1.2em;
+}
+
+.pj-text > h2 {
+  border-bottom: 3px solid #f5a360;
+  color: #ccd6f6;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  padding-block: 1rem;
+}
+
+.pj-text > p {
+  border-bottom: 1px solid #1e355c;
+  color: #8892b0;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding-block: 1rem;
+}
+
+.pj-github {
+  color: aquamarine;
+  font-weight: 600;
+  position: relative;
+}
+
+.pj-github::before,
+.credits-design > a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 1px;
+  background-color: aquamarine;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pj-github:hover::before,
+  .credits-design > a:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+
+#contact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3em;
+  margin-top: 15em;
+  margin-bottom: 10em;
+}
+
+.contact-title {
+  color: #ccd6f6;
+  font-family: "Manrope", sans-serif;
+  font-size: 2.7rem;
+  font-weight: 800;
+}
+
+.contact-desc {
+  color: #8892b0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  padding-inline: 20%;
+  text-align: center;
+}
+
+.contact-mail-btn {
+  color: aquamarine;
+  border: 1px solid aquamarine;
+  border-radius: 5px;
+  padding: .8em 1.5em;
+  transition: 300ms ease-in-out;
+}
+
+.contact-mail-btn:hover {
+  background-color: rgba(127, 255, 212, 0.082);
+}
+
+.fa-face-laugh-beam {
+  position: relative;
+  margin-left: 5px;
+  top: 1px;
+}
+
+.mail-at {
+  color: #8892b0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  margin-top: 1.5em;
+}
+
+.mail-link {
+  background-color: #233554;
+  border-radius: 5px;
+  box-shadow: aquamarine 7px -8px 0px -3px;
+  color: white;
+  display: flex;
+  padding: 7px;
+}
+
+.ti-copy {
+  color: aquamarine;
+  font-size: 1.2rem;
+  margin: 0;
+  margin-top: .05em;
+  margin-left: .3em;
+}
+
+#credits {
+  text-align: center;
+  padding-bottom: 1.5em;
+}
+
+.credits-design {
+  color: #8892b0;
+  font-size: .8rem;
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: 500;
+}
+
+.credits-design > a {
+  color: aquamarine;
+  font-family: "Roboto Mono", sans-serif;
+  font-size: .8rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.credits-hr {
+  border: none;
+  border-top: .9px solid #233554;
+  margin: auto;
+  margin-block: .5em;
+  max-width: 5%;
+}
