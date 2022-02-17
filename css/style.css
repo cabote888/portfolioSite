@@ -146,7 +146,7 @@ body {
   transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
 
-i {
+.fa-linkedin-in {
   margin-right: 8px;
 }
 
@@ -163,7 +163,6 @@ i {
 
 .about-title {
   color: #ccd6f6;
-  display: inline;
   font-family: "Manrope", sans-serif;
   font-size: 1.75rem;
   font-weight: 800;
@@ -187,8 +186,8 @@ i {
 
 .tech-list {
   display: flex;
-  margin-top: 1em;
   gap: 3em;
+  margin-top: 1em;
 }
 
 .tech-list > :nth-child(1),
@@ -215,39 +214,6 @@ i {
   padding-inline: 10%;
 }
 
-.pj-misc {
-  padding: 1em 1.4em 1em;
-}
-
-.ti-brand-github,
-.ti-external-link {
-  color: aquamarine;
-  font-size: 1.4rem;
-}
-
-.pj-column-1 {
-  display: flex;
-  flex-direction: column;
-  gap: 8em;
-}
-
-.pj-column-2 {
-  display: flex;
-  flex-direction: column;
-  gap: 8em;
-}
-
-.pj-card {
-  background-color: #112340;
-  border-radius: 10px;
-  box-shadow: rgba(17, 34, 64, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-
-.pj-img {
-  border-radius: 10px 10px 0 0;
-  width: 100%;
-}
-
 .pj-head > h2 {
   color: #ccd6f6;
   font-family: "Manrope", sans-serif;
@@ -260,27 +226,6 @@ i {
   font-size: 1.05rem;
   line-height: 1.5;
   margin-top: 1em;
-}
-
-.pj-text {
-  padding-inline: 1.2em;
-}
-
-.pj-text > h2 {
-  border-bottom: 3px solid #f5a360;
-  color: #ccd6f6;
-  font-family: "Manrope", sans-serif;
-  font-size: 1.35rem;
-  font-weight: 800;
-  padding-block: 1rem;
-}
-
-.pj-text > p {
-  border-bottom: 1px solid #1e355c;
-  color: #8892b0;
-  font-size: 1rem;
-  line-height: 1.6;
-  padding-block: 1rem;
 }
 
 .pj-github {
@@ -308,6 +253,55 @@ i {
     right: auto;
     width: 100%;
   }
+}
+
+.pj-column-1,
+.pj-column-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 8em;
+}
+
+.pj-card {
+  background-color: #112340;
+  border-radius: 10px;
+  box-shadow: rgba(17, 34, 64, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.pj-img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+}
+
+.pj-text {
+  padding-inline: 1.2em;
+}
+
+.pj-text > h2 {
+  border-bottom: 3px solid #f5a360;
+  color: #ccd6f6;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  padding-block: 1rem;
+}
+
+.pj-text > p {
+  border-bottom: 1px solid #1e355c;
+  color: #8892b0;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding-block: 1rem;
+}
+
+.pj-misc {
+  padding: 1em 1.4em 1em;
+}
+
+.ti-brand-github,
+.ti-external-link {
+  color: aquamarine;
+  font-size: 1.4rem;
 }
 
 #contact {
