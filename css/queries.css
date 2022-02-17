@@ -73,6 +73,10 @@
     max-width: 85%;
   }
 
+  .pj-column-2 {
+    gap: 4em;
+  }
+
   #contact {
     padding-inline: 5%;
   }
@@ -85,6 +89,7 @@
 @media only screen and (max-width: 480px) {
   #main {
     margin-left: 10%;
+    margin-top: 5em;
   }
   
   .greeting {
@@ -110,6 +115,10 @@
     font-size: 2rem;
   }
   
+  #projects {
+    margin-top: 10em;
+  }
+
   .pj-head {
     max-width: 100%;
   }
@@ -121,6 +130,11 @@
   .pj-head > p {
     font-size: 1rem;
     line-height: 1.4;
+  }
+
+  #contact {
+    margin-bottom: 5em;
+    margin-top: 10em;
   }
 
   .contact-desc {
