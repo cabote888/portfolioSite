@@ -1,15 +1,22 @@
 @media only screen and (max-width: 810px) {
   .nav-menu {
     position: fixed;
-    left: 100%;
-    top: 5rem;
+    right: -100%;
+    top: 0rem;
     flex-direction: column;
-    background-color: #0a192f;
-    width: 80%;
+    background-color: #112240;
+    width: 60%;
+    filter: blur(0px);
+    justify-content: space-evenly;
+    height: 100vh;
     text-align: center;
     transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 9998;
+  }
+
+  .nav-item {
+    margin-left: 0;
   }
 
   .nav-logo {
@@ -17,16 +24,14 @@
   }
 
   .nav-menu.active {
-    left: 0;
-  }
-
-  .nav-item {
-    margin: 2.5rem 0;
+    right: 0;
+    justify-content: space-evenly;
   }
 
   .hamburger {
     cursor: block;
     display: block;
+    z-index: 9999;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -45,6 +50,7 @@
 
   #main {
     margin-left: 5em;
+    margin-top: 10em;
   }
 
   .greeting {
@@ -89,7 +95,7 @@
 @media only screen and (max-width: 480px) {
   #main {
     margin-left: 10%;
-    margin-top: 5em;
+    margin-top: 10em;
   }
   
   .greeting {
