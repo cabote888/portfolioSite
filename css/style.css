@@ -1,29 +1,30 @@
-* {
+html {
   scroll-behavior: smooth;
+}
+
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Space Grotesk", sans-serif;
   list-style: none;
   text-decoration: none;
+  z-index: 0;
 }
 
 body {
   background-color: #0a192f;
 }
 
-.opacityMenu {
-  opacity: .5;
-}
-
-
 /* Prevents mobile menu from scrolling when active */
 .menuFixed {
   overflow: hidden;
 }
 
-.blurMain {
+/* Blurs page when mobile menu is active */
+.mainBlur {
   filter: blur(3px);
+  transition: 300ms ease-in-out;
 }
 
 ::selection {
@@ -52,10 +53,11 @@ body {
   transition: 0.3s ease-in-out;
   top: 0;
   width: 100%;
+  z-index: 9999;
 }
 
 .navbar {
-  background-color: rgba(10, 25, 47, .9);
+  background: rgba(10, 25, 47, .95);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   display: flex;
   backdrop-filter: blur(.5em);
@@ -72,7 +74,7 @@ body {
 }
 
 .nav-menu {
-  background-color: #0a192f;
+  /* background-color: #0a192f; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -127,19 +129,30 @@ body {
   margin-top: 10em;
 }
 
+.main-txt {
+  line-height: 1.2;
+}
+
 .greeting {
   color: aquamarine;
   font-family: 'Roboto Mono', monospace;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
 .my-name {
   color: #ccd6f6;
   font-family: "Manrope", sans-serif;
-  font-size: 5rem;
-  font-weight: 700;
-  padding: .1em 0 .1em 0;
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin-top: .2em;
+}
+
+.pre-desc {
+  color: #8892b0;
+  font-family: "Manrope", sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
 }
 
 .my-desc {
@@ -148,6 +161,7 @@ body {
   font-weight: 400;
   max-width: 50%;
   line-height: 1.5;
+  margin-top: 1em;
 }
 
 .self-taught {
@@ -167,7 +181,7 @@ body {
   font-weight: 500;
   padding: 15px 25px 15px 25px;
   margin-right: 2em;
-  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  transition: 300ms ease-in-out, color 300ms ease-in-out;
 }
 
 .fa-linkedin-in {
@@ -253,30 +267,15 @@ body {
 }
 
 .pj-github {
+  margin-bottom: 3.5rem;
+}
+
+.pj-github > :nth-child(1) {
   color: aquamarine;
+  font-size: 1.05rem;
+  font-family: "Roboto Mono", monospace;
   font-weight: 600;
-  position: relative;
-}
-
-.pj-github::before,
-.credits-design > a::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 0;
-  height: 1px;
-  background-color: aquamarine;
-  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .pj-github:hover::before,
-  .credits-design > a:hover::before {
-    left: 0;
-    right: auto;
-    width: 100%;
-  }
+  letter-spacing: -.5px;
 }
 
 .pj-column-1,
@@ -368,6 +367,7 @@ body {
   position: relative;
   margin-left: 5px;
   top: 1px;
+  z-index: -1;
 }
 
 .mail-at {
@@ -424,7 +424,6 @@ body {
   font-family: "Roboto Mono", sans-serif;
   font-size: .8rem;
   font-weight: 500;
-  position: relative;
 }
 
 .credits-hr {
@@ -434,3 +433,4 @@ body {
   margin-block: .5em;
   max-width: 5%;
 }
+
