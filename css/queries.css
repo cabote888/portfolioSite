@@ -119,6 +119,7 @@
   .my-desc {
     font-size: 1rem;
     max-width: 90%;
+    padding-top: .5em;
   }
 
   .about-desc {

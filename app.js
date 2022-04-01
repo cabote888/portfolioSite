@@ -37,20 +37,32 @@ const navTimeline = gsap.timeline({defaults: {autoAlpha:0, ease:"myEase", y:20, 
   .from(".my-name", {}, "<+=.05")
   .from(".pre-desc", {}, "<+=.05")
   .from(".my-desc", {}, "<+=.05")
-  .from(".main-btns", {}, "<+=.05") 
-
-gsap.defaults({ease:"power2.in", y:25, autoAlpha:0});  
+  .from(".main-btns", {}, "<+=.05")  
 
 const aboutMetimeline = gsap.timeline({scrollTrigger:{
   trigger:"#about-me",
+  start:"top 80%",
+  markers:true
+}})
+.from("#about-me", {autoAlpha:0, y:35, esase:"expo.in"})
+
+
+gsap.defaults({ease:"expo.out", y:20, duration:1, autoAlpha:0})
+
+const projectsTimeline = gsap.timeline({scrollTrigger:{
+  trigger:"#projects",
   markers:true,
   start:"top 80%"
 }})
-.from(".about-title", {})
-.from(".about-desc", {})
-.from(".tech-desc", {})
-.from(".tech-item", {})
+.from(".pj-head", {ease:"circ.out", y:30})
+.from(".card2", {})
+.from(".card1", {}, "<+.3")
+.from(".card3", {}, "<+.3")
 
+let copiedTl = gsap.timeline({ease:"linear", repeat:1, repeatDelay:1.5, yoyo:true, paused:true})
+  .from(".copied-to", {duration:.5, y:50, autoAlpha:0})
+
+document.getElementById("play").onclick = ()=> copiedTl.play(0);
 
 //Copy mail button
 
