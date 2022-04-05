@@ -41,25 +41,23 @@ const navTimeline = gsap.timeline({defaults: {autoAlpha:0, ease:"myEase", y:20, 
 
 const aboutMetimeline = gsap.timeline({scrollTrigger:{
   trigger:"#about-me",
-  start:"top 80%",
-  markers:true
+  start:"top 80%"
 }})
-.from("#about-me", {autoAlpha:0, y:35, esase:"expo.in"})
+.from("#about-me", {autoAlpha:0, y:35})
 
 
-gsap.defaults({ease:"expo.out", y:20, duration:1, autoAlpha:0})
+gsap.defaults({ease:"circ.out", y:20, duration:1, autoAlpha:0})
 
 const projectsTimeline = gsap.timeline({scrollTrigger:{
   trigger:"#projects",
-  markers:true,
   start:"top 80%"
 }})
 .from(".pj-head", {ease:"circ.out", y:30})
 .from(".card2", {})
-.from(".card1", {}, "<+.3")
-.from(".card3", {}, "<+.3")
+.from(".card1", {})
+.from(".card3", {})
 
-let copiedTl = gsap.timeline({ease:"linear", repeat:1, repeatDelay:1.5, yoyo:true, paused:true})
+let copiedTl = gsap.timeline({ease:"linear", repeat:1, repeatDelay:1.2, yoyo:true, paused:true})
   .from(".copied-to", {duration:.5, y:50, autoAlpha:0})
 
 document.getElementById("play").onclick = ()=> copiedTl.play(0);
